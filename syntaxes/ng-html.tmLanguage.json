@@ -155,8 +155,8 @@
 				},
 				{
 					"comment": "Angular attribute",
-					"match": "([(\\[*#]{1,2})(\\@?(?:\\w|\\.)+)([)\\]]{0,2})(=[\"'](?:.+)[\"'])?",
-					"captures": {
+					"begin": "([(\\[*#]{1,2})(\\@?(?:\\w|\\.)+)([)\\]]{0,2})",
+					"beginCaptures": {
 						"1": {
 							"name": "punctuation.definition.ng-attribute-name.begin.html"
 						},
@@ -169,15 +169,14 @@
 						},
 						"3": {
 							"name": "punctuation.definition.ng-attribute-name.end.html"
-						},
-						"4": {
-							"patterns": [
-								{
-									"include": "#ng-attribute-value"
-								}
-							]
 						}
 					},
+					"end": "(?=\\s*+[^=\\s])",
+					"patterns": [
+						{
+							"include": "#ng-attribute-interior"
+						}
+					],
 					"name": "ng-attribute.html"
 				},
 				{
@@ -475,32 +474,50 @@
 					"name": "keyword.control.ng-control.html"
 				},
 				{
-					"match": ".+",
+					"match": "(\\@?\\w)",
 					"name": "entity.other.attribute-name.ng-attribute-name.html"
+				},
+				{
+					"match": "\\.",
+					"name": "punctuation.accessor.html"
 				}
 			]
 		},
-		"ng-attribute-value": {
-			"match": "(=)(\")(.+)(\")",
-			"captures": {
-				"1": {
-					"name": "punctuation.separator.key-value.html"
-				},
-				"2": {
-					"name": "punctuation.definition.string.begin.html"
-				},
-				"3": {
-					"contentName": "source.js",
+		"ng-attribute-interior": {
+			"patterns": [
+				{
+					"begin": "=",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.separator.key-value.html"
+						}
+					},
+					"end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
 					"patterns": [
 						{
-							"include": "source.js"
+							"begin": "\"",
+							"beginCaptures": {
+								"0": {
+									"name": "punctuation.definition.string.begin.html"
+								}
+							},
+							"end": "\"",
+							"endCaptures": {
+								"0": {
+									"name": "punctuation.definition.string.end.html"
+								}
+							},
+							"name": "source.js",
+							"patterns": [
+								{
+									"contentName": "source.js",
+									"include": "source.js"
+								}
+							]
 						}
 					]
-				},
-				"4": {
-					"name": "punctuation.definition.string.end.html"
 				}
-			}
+			]
 		},
 		"cdata": {
 			"begin": "<!\\[CDATA\\[",
