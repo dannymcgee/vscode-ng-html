@@ -29,3 +29,6 @@ Potential disadvantages are that if you *don't want* this extra syntax highlight
 
 ## Limitations
 * "Inline" templates defined in a component.ts file (e.g., as a template literal) do not receive any special syntax highlighting. This would require replacing VS Code's [default TypeScript grammar](https://github.com/microsoft/vscode/tree/master/extensions/typescript-basics), and since that grammar receives frequent updates, it would be onerous to keep up to date. If, however, VS Code's contributors or another extension adds recognition of the `template` value in an Angular component as embedded HTML, that embedded HTML block should *theoretically* benefit from the syntax highlighting provided by this extension, since this extension overrides the default HTML grammar.
+
+## License
+MIT
