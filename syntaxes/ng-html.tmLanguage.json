@@ -155,7 +155,7 @@
 				},
 				{
 					"comment": "Angular attribute",
-					"match": "([(\\[*#]{1,2})(\\@?(?:\\w|\\.)+)([)\\]]{0,2})(=)(\")(.+)(\")",
+					"match": "([(\\[*#]{1,2})(\\@?(?:\\w|\\.)+)([)\\]]{0,2})(=[\"'](?:.+)[\"'])?",
 					"captures": {
 						"1": {
 							"name": "punctuation.definition.ng-attribute-name.begin.html"
@@ -167,21 +167,11 @@
 							"name": "punctuation.definition.ng-attribute-name.end.html"
 						},
 						"4": {
-							"name": "punctuation.separator.key-value.html"
-						},
-						"5": {
-							"name": "punctuation.definition.string.begin.html"
-						},
-						"6": {
-							"contentName": "source.js",
 							"patterns": [
 								{
-									"include": "source.js"
+									"include": "#ng-attribute-value"
 								}
 							]
-						},
-						"7": {
-							"name": "punctuation.definition.string.end.html"
 						}
 					},
 					"name": "ng-attribute.html"
@@ -469,6 +459,28 @@
 					]
 				}
 			]
+		},
+		"ng-attribute-value": {
+			"match": "(=)(\")(.+)(\")",
+			"captures": {
+				"1": {
+					"name": "punctuation.separator.key-value.html"
+				},
+				"2": {
+					"name": "punctuation.definition.string.begin.html"
+				},
+				"3": {
+					"contentName": "source.js",
+					"patterns": [
+						{
+							"include": "source.js"
+						}
+					]
+				},
+				"4": {
+					"name": "punctuation.definition.string.end.html"
+				}
+			}
 		},
 		"cdata": {
 			"begin": "<!\\[CDATA\\[",
