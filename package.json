@@ -10,12 +10,33 @@
 	"contributes": {
 		"languages": [
 			{
-				"id": "ng-html",
-				"extensions": [ ".component.html" ],
-				"aliases": [ "Angular HTML" ],
+				"id": "html",
+				"extensions": [
+					".html",
+          ".htm",
+          ".shtml",
+          ".xhtml",
+          ".mdoc",
+          ".jsp",
+          ".asp",
+          ".aspx",
+          ".jshtm",
+          ".volt",
+          ".ejs",
+          ".rhtml"
+				],
+				"aliases": [
+					"HTML",
+          "htm",
+          "html",
+          "xhtml"
+				],
 				"mimetypes": [
+          "text/html",
+          "text/x-jshtm",
           "text/template",
-          "text/ng-template"
+          "text/ng-template",
+          "application/xhtml+xml"
         ],
 				"configuration": "./language-configuration.json"
       }
@@ -23,9 +44,9 @@
 		"grammars": [
 			{
 				"scopeName": "text.html.basic",
-				"path": "./syntaxes/ng-html.tmLanguage.json",
+				"path": "./syntaxes/html.tmLanguage.json",
 				"embeddedLanguages": {
-					"text.html": "ng-html",
+					"text.html": "html",
 					"source.css": "css",
 					"source.js": "javascript",
 					"source.python": "python",
@@ -36,11 +57,11 @@
 				}
       },
 			{
-				"language": "ng-html",
+				"language": "html",
 				"scopeName": "text.html.derivative",
 				"path": "./syntaxes/html-derivative.tmLanguage.json",
 				"embeddedLanguages": {
-					"text.html": "ng-html",
+					"text.html": "html",
 					"source.css": "css",
 					"source.js": "javascript",
 					"source.python": "python",
