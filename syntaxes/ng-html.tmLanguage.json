@@ -416,7 +416,12 @@
 					"patterns": [
 						{
 							"match": "([^\\s\"'=<>`/]|/(?!>))+",
-							"name": "string.unquoted.html"
+							"name": "string.unquoted.html",
+							"patterns": [
+								{
+									"include": "#ng-interpolation"
+								}
+							]
 						},
 						{
 							"begin": "\"",
@@ -435,6 +440,9 @@
 							"patterns": [
 								{
 									"include": "#entities"
+								},
+								{
+									"include": "#ng-interpolation"
 								}
 							]
 						},
@@ -455,6 +463,9 @@
 							"patterns": [
 								{
 									"include": "#entities"
+								},
+								{
+									"include": "#ng-interpolation"
 								}
 							]
 						},
