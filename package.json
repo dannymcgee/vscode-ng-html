@@ -22,7 +22,7 @@
     ],
 		"grammars": [
 			{
-				"scopeName": "text.ng-html.basic",
+				"scopeName": "text.html.basic",
 				"path": "./syntaxes/ng-html.tmLanguage.json",
 				"embeddedLanguages": {
 					"text.html": "ng-html",
@@ -37,8 +37,8 @@
       },
 			{
 				"language": "ng-html",
-				"scopeName": "text.ng-html.derivative",
-				"path": "./syntaxes/ng-html-derivative.tmLanguage.json",
+				"scopeName": "text.html.derivative",
+				"path": "./syntaxes/html-derivative.tmLanguage.json",
 				"embeddedLanguages": {
 					"text.html": "ng-html",
 					"source.css": "css",
