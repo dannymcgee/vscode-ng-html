@@ -161,7 +161,11 @@
 							"name": "punctuation.definition.ng-attribute-name.begin.html"
 						},
 						"2": {
-							"name": "entity.other.attribute-name.ng-attribute-name.html"
+							"patterns": [
+								{
+									"include": "#ng-attribute-name"
+								}
+							]
 						},
 						"3": {
 							"name": "punctuation.definition.ng-attribute-name.end.html"
@@ -457,6 +461,22 @@
 							"name": "invalid.illegal.unexpected-equals-sign.html"
 						}
 					]
+				}
+			]
+		},
+		"ng-attribute-name": {
+			"patterns": [
+				{
+					"match": "ngClass",
+					"name": "entity.other.attribute-name.ng-attribute-name.html meta.attribute.class.html entity.other.attribute-name.html"
+				},
+				{
+					"match": "(ngFor|ngIf)",
+					"name": "keyword.control.ng-control.html"
+				},
+				{
+					"match": ".+",
+					"name": "entity.other.attribute-name.ng-attribute-name.html"
 				}
 			]
 		},
