@@ -4,6 +4,16 @@
 	"description": "%description%",
 	"version": "1.0.0",
 	"publisher": "dannymcgee",
+	"license": "MIT",
+	"author": "Danny McGee",
+	"icon": "icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dannymcgee/vscode-ng-html.git"
+	},
+	"bugs": {
+		"url": "https://github.com/dannymcgee/vscode-ng-html/issues"
+	},
 	"engines": {
 		"vscode": "0.10.x"
 	},
