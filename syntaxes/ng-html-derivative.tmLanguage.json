@@ -5,43 +5,43 @@
 		"Once accepted there, we are happy to receive an update request."
 	],
 	"version": "https://github.com/textmate/html.tmbundle/commit/390c8870273a2ae80244dae6db6ba064a802f407",
-	"name": "HTML (Derivative)",
-	"scopeName": "text.html.derivative",
+	"name": "Angular HTML (Derivative)",
+	"scopeName": "text.ng-html.derivative",
 	"injections": {
-		"R:text.html - (comment.block, text.html meta.embedded, meta.tag.*.*.html, meta.tag.*.*.*.html, meta.tag.*.*.*.*.html)": {
+		"R:text.ng-html - (comment.block, text.ng-html meta.embedded, meta.tag.*.*.ng-html, meta.tag.*.*.*.ng-html, meta.tag.*.*.*.*.ng-html)": {
 			"comment": "Uses R: to ensure this matches after any other injections.",
 			"patterns": [
 				{
 					"match": "<",
-					"name": "invalid.illegal.bad-angle-bracket.html"
+					"name": "invalid.illegal.bad-angle-bracket.ng-html"
 				}
 			]
 		}
 	},
 	"patterns": [
 		{
-			"include": "text.html.basic#core-minus-invalid"
+			"include": "text.ng-html.basic#core-minus-invalid"
 		},
 		{
 			"begin": "(</?)(\\w[^\\s>]*)(?<!/)",
 			"beginCaptures": {
 				"1": {
-					"name": "punctuation.definition.tag.begin.html"
+					"name": "punctuation.definition.tag.begin.ng-html"
 				},
 				"2": {
-					"name": "entity.name.tag.html"
+					"name": "entity.name.tag.ng-html"
 				}
 			},
 			"end": "((?: ?/)?>)",
 			"endCaptures": {
 				"1": {
-					"name": "punctuation.definition.tag.end.html"
+					"name": "punctuation.definition.tag.end.ng-html"
 				}
 			},
-			"name": "meta.tag.other.unrecognized.html.derivative",
+			"name": "meta.tag.other.unrecognized.ng-html.derivative",
 			"patterns": [
 				{
-					"include": "text.html.basic#attribute"
+					"include": "text.ng-html.basic#attribute"
 				}
 			]
 		}
