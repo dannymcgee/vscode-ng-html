@@ -32,6 +32,9 @@
 			"include": "#cdata"
 		},
 		{
+			"include": "#ng-interpolation"
+		},
+		{
 			"include": "#tags-valid"
 		},
 		{
@@ -579,6 +582,9 @@
 				},
 				{
 					"include": "#entities"
+				},
+				{
+					"include": "#ng-interpolation"
 				}
 			]
 		},
@@ -1135,6 +1141,27 @@
 					]
 				}
 			}
+		},
+		"ng-interpolation": {
+			"begin": "\\{\\{",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.interpolation.begin.html"
+				}
+			},
+			"end": "}}",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.interpolation.end.html"
+				}
+			},
+			"name": "source.js",
+			"patterns": [
+				{
+					"contentName": "source.js",
+					"include": "source.js"
+				}
+			]
 		},
 		"svg": {
 			"patterns": [
