@@ -3,7 +3,7 @@
 	"displayName": "%displayName%",
 	"description": "%description%",
 	"version": "1.0.0",
-	"publisher": "vscode",
+	"publisher": "dannymcgee",
 	"engines": {
 		"vscode": "0.10.x"
 	},
@@ -25,7 +25,7 @@
 				"scopeName": "text.html.basic",
 				"path": "./syntaxes/ng-html.tmLanguage.json",
 				"embeddedLanguages": {
-					"text.html": "html",
+					"text.html": "ng-html",
 					"source.css": "css",
 					"source.js": "javascript",
 					"source.python": "python",
@@ -36,11 +36,11 @@
 				}
       },
 			{
-				"language": "html",
+				"language": "ng-html",
 				"scopeName": "text.html.derivative",
 				"path": "./syntaxes/html-derivative.tmLanguage.json",
 				"embeddedLanguages": {
-					"text.html": "html",
+					"text.html": "ng-html",
 					"source.css": "css",
 					"source.js": "javascript",
 					"source.python": "python",
