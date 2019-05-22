@@ -111,10 +111,11 @@
 													"name": "source.css"
 												}
 											},
-											"name": "string.quoted.double.html",
+											"comment": "FIXME: CSS lang is embedded correctly, but at the root context; should be #rule-list",
+											"name": "meta.property-list.css",
 											"patterns": [
 												{
-													"include": "#entities"
+													"include": "source.css#rule-list"
 												}
 											]
 										},
@@ -135,7 +136,7 @@
 													"name": "source.css"
 												}
 											},
-											"name": "string.quoted.single.html",
+											"name": "source.css",
 											"patterns": [
 												{
 													"include": "#entities"
@@ -151,6 +152,39 @@
 							]
 						}
 					]
+				},
+				{
+					"comment": "Angular attribute",
+					"match": "([(\\[*#]{1,2})(\\@?(?:\\w|\\.)+)([)\\]]{0,2})(=)(\")(.+)(\")",
+					"captures": {
+						"1": {
+							"name": "punctuation.definition.ng-attribute-name.begin.html"
+						},
+						"2": {
+							"name": "entity.other.attribute-name.ng-attribute-name.html"
+						},
+						"3": {
+							"name": "punctuation.definition.ng-attribute-name.end.html"
+						},
+						"4": {
+							"name": "punctuation.separator.key-value.html"
+						},
+						"5": {
+							"name": "punctuation.definition.string.begin.html"
+						},
+						"6": {
+							"contentName": "source.js",
+							"patterns": [
+								{
+									"include": "source.js"
+								}
+							]
+						},
+						"7": {
+							"name": "punctuation.definition.string.end.html"
+						}
+					},
+					"name": "ng-attribute.html"
 				},
 				{
 					"begin": "on(s(croll|t(orage|alled)|u(spend|bmit)|e(curitypolicyviolation|ek(ing|ed)|lect))|hashchange|c(hange|o(ntextmenu|py)|u(t|echange)|l(ick|ose)|an(cel|play(through)?))|t(imeupdate|oggle)|in(put|valid)|o(nline|ffline)|d(urationchange|r(op|ag(start|over|e(n(ter|d)|xit)|leave)?)|blclick)|un(handledrejection|load)|p(opstate|lay(ing)?|a(ste|use|ge(show|hide))|rogress)|e(nded|rror|mptied)|volumechange|key(down|up|press)|focus|w(heel|aiting)|l(oad(start|e(nd|d(data|metadata)))?|anguagechange)|a(uxclick|fterprint|bort)|r(e(s(ize|et)|jectionhandled)|atechange)|m(ouse(o(ut|ver)|down|up|enter|leave|move)|essage(error)?)|b(efore(unload|print)|lur))(?![\\w:-])",
