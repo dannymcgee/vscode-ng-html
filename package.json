@@ -2,7 +2,7 @@
 	"name": "ng-html",
 	"displayName": "%displayName%",
 	"description": "%description%",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "dannymcgee",
 	"license": "MIT",
 	"author": "Danny McGee",
@@ -23,34 +23,34 @@
 				"id": "html",
 				"extensions": [
 					".html",
-          ".htm",
-          ".shtml",
-          ".xhtml",
-          ".mdoc",
-          ".jsp",
-          ".asp",
-          ".aspx",
-          ".jshtm",
-          ".volt",
-          ".ejs",
-          ".rhtml"
+					".htm",
+					".shtml",
+					".xhtml",
+					".mdoc",
+					".jsp",
+					".asp",
+					".aspx",
+					".jshtm",
+					".volt",
+					".ejs",
+					".rhtml"
 				],
 				"aliases": [
 					"HTML",
-          "htm",
-          "html",
-          "xhtml"
+					"htm",
+					"html",
+					"xhtml"
 				],
 				"mimetypes": [
-          "text/html",
-          "text/x-jshtm",
-          "text/template",
-          "text/ng-template",
-          "application/xhtml+xml"
-        ],
+					"text/html",
+					"text/x-jshtm",
+					"text/template",
+					"text/ng-template",
+					"application/xhtml+xml"
+				],
 				"configuration": "./language-configuration.json"
-      }
-    ],
+			}
+		],
 		"grammars": [
 			{
 				"scopeName": "text.html.basic",
@@ -65,7 +65,7 @@
 				"tokenTypes": {
 					"meta.tag string.quoted": "other"
 				}
-      },
+			},
 			{
 				"language": "html",
 				"scopeName": "text.html.derivative",
@@ -80,7 +80,7 @@
 				"tokenTypes": {
 					"meta.tag string.quoted": "other"
 				}
-      }
-    ]
+			}
+		]
 	}
 }
