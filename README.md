@@ -2,7 +2,7 @@
 
 This extension adds tokenization for Angular-specific syntax in HTML template files.
 
-The lack of this feature in VS Code (and lack of a good extension as far as I could find) drove me to WebStorm for a while, but I couldn't stomach the awkward JRE-based text rendering or the extremely limited customization options, so I decided to move back to VS Code and create this extension. Issue reports and pull requests are welcome!
+The lack of this feature in VS Code (and lack of a good extension at the time) drove me to WebStorm for a while, but I couldn't stomach the awkward JRE-based text rendering or the extremely limited customization options, so I eventually moved back to VS Code and created this extension. (Update: [another extension](https://marketplace.visualstudio.com/items?itemName=ghaschel.vscode-angular-html) was published in the meantime, which may serve your needs if this one does not.) Issue reports and pull requests are welcome!
 
 ## Features
 * `*ngIf` and `*ngFor` attributes on an HTML element are marked as control keywords
@@ -11,6 +11,7 @@ The lack of this feature in VS Code (and lack of a good extension as far as I co
 * Values of an Angular attribute are tokenized as embedded JavaScript instead of a string
 * Angular interpolation (`{{ }}`) in an HTML tag or attribute value are tokenized as embedded JavaScript
 * Uses standard naming conventions for new tokens, so it should work with your favorite theme out of the box
+* Mostly identical to VS Code's HTML grammar, with small modifications made to add the features listed above
 
 ## Screenshots
 ![Screenshot](./screenshots-1.gif)
@@ -28,7 +29,7 @@ Potential disadvantages are that if you *don't want* this extra syntax highlight
 * Embedded JavaScript blocks in Angular template files do not currently benefit from Intellisense or autocomplete
 
 ## Limitations
-* "Inline" templates defined in a component.ts file (e.g., as a template literal) do not receive any special syntax highlighting. This would require replacing VS Code's [default TypeScript grammar](https://github.com/microsoft/vscode/tree/master/extensions/typescript-basics), and since that grammar receives frequent updates, it would be onerous to keep up to date. If, however, VS Code's contributors or another extension adds recognition of the `template` value in an Angular component as embedded HTML, that embedded HTML block should *theoretically* benefit from the syntax highlighting provided by this extension, since this extension overrides the default HTML grammar.
+* "Inline" templates defined in a component.ts file (e.g., as a template literal) do not receive any special syntax highlighting. This would require replacing VS Code's [default TypeScript grammar](https://github.com/microsoft/vscode/tree/master/extensions/typescript-basics), and since that grammar receives frequent updates, it would be onerous to keep up to date. However, extensions like [this one](https://marketplace.visualstudio.com/items?itemName=natewallace.angular2-inline) which add recognition of the `template` value in an Angular component as embedded HTML should *theoretically* benefit from the syntax highlighting provided by this extension, since this extension overrides the default HTML grammar, but I have not personally tested that theory so don't take my word for it.
 
 ## License
 MIT
