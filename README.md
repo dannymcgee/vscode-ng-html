@@ -25,8 +25,8 @@ The advantages are that your Angular template files will continue to benefit fro
 
 Potential disadvantages are that if you *don't want* this extra syntax highlighting in your non-Angular HTML projects (for example, if you're using a library like Mustache or Handlebars whose syntax conflicts with Angular's), you will need to disable this extension for those projects, or selectively enable it only in your Angular workspaces.
 
-## Known Issues
-* Embedded JavaScript blocks in Angular template files do not currently benefit from Intellisense or autocomplete
+## IntelliSense
+To get autcomplete, error detection, and other features for embedded JS blocks in your Angular HTML templates, install the official [Angular Language Service extension](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template).
 
 ## Limitations
 * "Inline" templates defined in a component.ts file (e.g., as a template literal) do not receive any special syntax highlighting. This would require replacing VS Code's [default TypeScript grammar](https://github.com/microsoft/vscode/tree/master/extensions/typescript-basics), and since that grammar receives frequent updates, it would be onerous to keep up to date. However, extensions like [this one](https://marketplace.visualstudio.com/items?itemName=natewallace.angular2-inline) which add recognition of the `template` value in an Angular component as embedded HTML should *theoretically* benefit from the syntax highlighting provided by this extension, since this extension overrides the default HTML grammar, but I have not personally tested that theory so don't take my word for it.
