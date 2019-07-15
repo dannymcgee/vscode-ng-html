@@ -484,7 +484,7 @@
 					"name": "entity.other.attribute-name.ng-attribute-name.html meta.attribute.class.html entity.other.attribute-name.html"
 				},
 				{
-					"match": "(ngFor|ngIf|ngSwitch|ngSwitchCase)",
+					"match": "(ngFor|ngIf|ngSwitchCase|ngSwitchDefault|ngSwitch)",
 					"name": "keyword.control.ng-control.html"
 				},
 				{
