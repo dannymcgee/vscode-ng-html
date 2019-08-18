@@ -18,6 +18,9 @@ The lack of this feature in VS Code (and lack of a good extension at the time) d
 ![Screenshot](./screenshots-2.gif)
 ![Screenshot](./screenshots-3.gif)
 
+## Inline Templates
+Another small extension of mine, [TypeScript Grammar Extended](https://marketplace.visualstudio.com/items?itemName=dannymcgee.ts-grammar-extended), tokenizes template literals in the value of object members with a key of 'template' as embedded HTML. Since this extension replaces the default HTML grammar (see below), using them both in conjunction means that you can get all the benefits of this extension with your 'inline' Angular templates as well.
+
 ## A Note on Implementation
 Rather than defining "Angular HTML" as a wholly new language with these new features added on, this extension overrides/replaces the default HTML grammar that comes with VS Code.
 
@@ -27,9 +30,6 @@ Potential disadvantages are that if you *don't want* this extra syntax highlight
 
 ## IntelliSense
 To get autcomplete, error detection, and other features for embedded JS blocks in your Angular HTML templates, install the official [Angular Language Service extension](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template).
-
-## Limitations
-* "Inline" templates defined in a component.ts file (e.g., as a template literal) do not receive any special syntax highlighting. This would require replacing VS Code's [default TypeScript grammar](https://github.com/microsoft/vscode/tree/master/extensions/typescript-basics), and since that grammar receives frequent updates, it would be onerous to keep up to date. However, extensions like [this one](https://marketplace.visualstudio.com/items?itemName=natewallace.angular2-inline) which add recognition of the `template` value in an Angular component as embedded HTML should *theoretically* benefit from the syntax highlighting provided by this extension, since this extension overrides the default HTML grammar, but I have not personally tested that theory so don't take my word for it.
 
 ## License
 MIT
