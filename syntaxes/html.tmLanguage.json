@@ -158,7 +158,7 @@
 				},
 				{
 					"comment": "Angular attribute",
-					"begin": "([(\\[*#]{1,2})(\\@?(?:\\w|\\.)+)([)\\]]{0,2})",
+					"begin": "([(\\[*#]{1,2})(\\@?(?:[-_a-zA-Z0-9.])+)([)\\]]{0,2})",
 					"beginCaptures": {
 						"1": {
 							"name": "punctuation.definition.ng-attribute-name.begin.html"
@@ -488,7 +488,7 @@
 					"name": "keyword.control.ng-control.html"
 				},
 				{
-					"match": "(\\@?\\w)",
+					"match": "(\\@?[-_a-zA-Z]+)",
 					"name": "entity.other.attribute-name.ng-attribute-name.html"
 				},
 				{
